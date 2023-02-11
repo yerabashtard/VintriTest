@@ -19,7 +19,8 @@ class DbDocument {
   /**
    * Insert this dbDocument into the database. According to the documents this insert function is supposed
    * to return a Database Builder which has a callback which is called when the operation is complete. On
-   * testing however no Database Builder object is returned! Proceeding with an asynchronous insert for now.
+   * testing however no Database Builder object is returned! Also no Promise is returned. Proceeding with a
+   * synchronous solution.
    */
   insert () {
     Database.insert(this)

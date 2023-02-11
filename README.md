@@ -1,6 +1,11 @@
 # VintriTest
 Created using Node LTS 18.4.0 and NPM 9.4.2.
 
+Quick notes
+- The server/config/config.js file should be viewed to ensure correct configuration before the Server is started.
+- The server can be started using the 'npm start' command from the root directory.
+- Tests can be run using the 'npm test' command from the root directory.
+
 Express vs Koa - I've used both, but decided to go with Express due to it being the defacto standard.
 
 Database
@@ -13,6 +18,9 @@ I took a look at a couple of embedded databases I could use in addition to the o
 
 Based on the top three hits when starting the search I'll use https://github.com/petersirka/nosql. There could be a better option, but I'm not going to be too fussy for this project.
 
+Testing
+There are so many different frameworks to choose from. A lot of them will definitely work for what I need. Going to use Mocha, Chai, and Sinon as indicated by the test requirements.
+
 Caching
 Requirements - Again something lightweight. I won't need to cache much for this project. I don't care too much about whether the cache persists somewhere like in a file or is in-memory and therefore goes away when the server is shut down. I'll go with something that gets a lot of downloads. Downloads might be an indicator of a more stable bug-free project.
 
@@ -21,3 +29,4 @@ Requirements - Again something lightweight. I won't need to cache much for this 
 	https://www.npmjs.com/package/node-json-cache (ISC) - Pretty much dead. 1 download last week.
 	https://www.npmjs.com/package/node-cache (MIT) - Not sure it's being updated anymore as last publish was 3 years ago, but over 2M downloads weekly so I'm going with this one.
 
+Separate projects for front end and back end vs one project to contain them both - In a real world scenario these should be separated. At the very least this would make maintenance a LOT easier. In this case though one project makes sense to make the reveiwing process easier for the Vintri team.
