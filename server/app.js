@@ -1,7 +1,7 @@
 const beers = require('./routes/beers')
 const bodyParser = require('body-parser')
+const { checkEmailInHeader } = require('./lib/middleware/email_middleware')
 const { Database } = require('./lib/database')
-// Initialize database
 const db = new Database()
 const express = require('express')
 const { Logger } = require('./lib/logger')
@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // Routes
-app.use('/beers', beers)
+app.use('/beers', checkEmailInHeader, beers)
 
 // Catch any uncaught exceptions
 process.on('uncaughtException', (err) => {
