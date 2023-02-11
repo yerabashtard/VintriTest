@@ -4,12 +4,14 @@
 
 const Prefix = {
   DATA: 'DATA::',
-  LOG: 'LOG::'
+  LOG: 'LOG::',
+  RATING: 'RATING::'
 }
 
 const Type = {
   DATA: 'Data',
-  LOG: 'Log'
+  LOG: 'Log',
+  RATING: 'Rating'
 }
 
 module.exports.Prefix = Prefix

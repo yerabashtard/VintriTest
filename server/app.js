@@ -1,4 +1,5 @@
 const beers = require('./routes/beers')
+const bodyParser = require('body-parser')
 const { Database } = require('./lib/database')
 // Initialize database
 const db = new Database()
@@ -13,6 +14,11 @@ app.listen(port, () => {
   logger.info(`Beer services running on ${port}`)
 })
 
+// Express' supported way of parsing request bodies
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// Routes
 app.use('/beers', beers)
 
 // Catch any uncaught exceptions
