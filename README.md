@@ -36,3 +36,21 @@
 
 ### Separate projects for front end and back end vs one project to contain them both
 ##### In a real world scenario these should be separated. In this case though one project makes sense to make the reveiwing process easier for the Vintri team. After starting off doing them both in one project I've pivoted away from that and made them separate. They are too disparate to include together and it's making development more difficult as I try to imagine how to do things like share resources when none of that is needed.
+
+## Code Review
+
+##### lib/data_requests.js - The NodeCache module used here should be extracted into its own interface. This allows others to re-use it easily and allows a change to another cache provider to happen without fishing through the code for every usage.
+
+##### lib/data_requests.js - I'm finding the name of this file too generic considering there's only 1 external call that the server makes. I think it would be better to call it beer_api_requests or something like that. Then the BASE_PATH variable could be extracted and become a class constant. Afterwards it could be refactored to consume an interface which provides all of the HTTP methods that would plug into Axios (or any other provider in the future).
+
+##### lib/data_requests.js - The getURL function could go into a shared utilities file and potentially be reused from there. Since it would have to be exposed at that point robust unit testing could be done on it.
+
+##### lib/database.js - Should be commented indicating it is a Singleton.
+
+##### lib/middleware/email_middleware.js - If the x-user header is meant to be used for authentication the error returned should not indicate the actual problem because malicious users could use that data. Instead a generic 404 could be returned and the real reason for the rejection would be logged internally.
+
+##### lib/logger.js - The logs should go into a file and not just the database for easier viewing.
+
+##### routes/beers.js - The mechanism used to check if the rating is number between 1 and 5 should be unit tested to make sure no bad values are accepted.
+
+##### utils/general_utils.js - All functions made available here should be unit tested.
