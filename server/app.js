@@ -1,7 +1,9 @@
 const beers = require('./routes/beers')
 const bodyParser = require('body-parser')
 const { checkEmailInHeader } = require('./lib/middleware/email_middleware')
+const cors = require('cors')
 const { Database } = require('./lib/database')
+// Initialize database. Do not remove
 const db = new Database()
 const express = require('express')
 const { Logger } = require('./lib/logger')
@@ -13,6 +15,9 @@ const app = express()
 app.listen(port, () => {
   logger.info(`Beer services running on ${port}`)
 })
+
+// Enable CORS requests
+app.use(cors())
 
 // Express' supported way of parsing request bodies
 app.use(bodyParser.json())
@@ -35,3 +40,5 @@ app.use((err, req, res, next) => {
   logger.error(err.toString())
   res.status(err.code).send(err.toString())
 })
+
+module.exports = app

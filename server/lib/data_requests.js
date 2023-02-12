@@ -22,16 +22,17 @@ const getBeers = async (name) => {
     logger.debug(`Cached result for ${name} will be returned.`)
     return beerRequestCache.get(name)
   }
-  const BASE_PATH = 'v2/beers/'
+  const BASE_PATH = 'v2/beers'
   const url = _getUrl(BASE_PATH, { beer_name: name })
   try {
     logger.debug(`Obtaining results for "${name}" from PunkAPI.`)
     const resp = await axios.get(url.toString())
     const result = resp.data
+    logger.info(`Obtained ${result.length} results from PunkAPI.`)
     beerRequestCache.set(name, result)
     return result
   } catch (err) {
-    logger.error(`Error getting data from ${url.toString()}. Reason: ${err.response.data.toString()}`)
+    logger.error(`Error getting data from ${url.toString()}. Reason: ${err.response?.data?.toString()}`)
     throw err
   }
 }

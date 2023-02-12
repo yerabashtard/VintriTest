@@ -4,6 +4,7 @@ Created using Node LTS 18.4.0 and NPM 9.4.2.
 Quick notes
 - The server/config/config.js file should be viewed to ensure correct configuration before the Server is started.
 - The server can be started using the 'npm start' command from the root directory.
+- Run npm install from the root directly to get all required packages
 - Tests can be run using the 'npm test' command from the root directory.
 
 Express vs Koa - I've used both, but decided to go with Express due to it being the defacto standard.
@@ -29,4 +30,4 @@ Requirements - Again something lightweight. I won't need to cache much for this 
 	https://www.npmjs.com/package/node-json-cache (ISC) - Pretty much dead. 1 download last week.
 	https://www.npmjs.com/package/node-cache (MIT) - Not sure it's being updated anymore as last publish was 3 years ago, but over 2M downloads weekly so I'm going with this one.
 
-Separate projects for front end and back end vs one project to contain them both - In a real world scenario these should be separated. At the very least this would make maintenance a LOT easier. In this case though one project makes sense to make the reveiwing process easier for the Vintri team.
+Separate projects for front end and back end vs one project to contain them both - In a real world scenario these should be separated. In this case though one project makes sense to make the reveiwing process easier for the Vintri team. After starting off doing them both in one project I've pivoted away from that and made them separate. They are too disparate to include together and it's making development more difficult as I try to imagine how to do things like share resources when none of that is needed.

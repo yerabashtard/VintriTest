@@ -42,7 +42,7 @@ router.post('/rate/:id', asyncHandler((req, res) => {
   const rateDoc = new RatingDocument(beerId, rating, body.comments)
   rateDoc.insert()
   logger.info(`Successfully entered rating for Beer ID: ${beerId}`)
-  res.status(HTTP_STATUS.OK).end()
+  res.status(HTTP_STATUS.CREATED).end()
 }))
 
 module.exports = router
