@@ -14,7 +14,7 @@
 ##### - I've used both, but decided to go with Express due to it being the defacto standard.
 
 ### Database
-##### Requirements - I want something super lightweight since this database shouldn't have to do much. I want something embedded into the app so that it will be easier to ##### start up instead of having a whole other database server somewhere. I'm only planning to store a beerId, rating, and comments which would work fine in a SQL database, ##### but I'll look for a NoSQL db because that's what is currently used at Vintri.
+##### Requirements - I want something super lightweight since this database shouldn't have to do much. I want something embedded into the app so that it will be easier to start up instead of having a whole other database server somewhere. I'm only planning to store a beerId, rating, and comments which would work fine in a SQL database, but I'll look for a NoSQL db because that's what is currently used at Vintri.
 
 ##### I took a look at a couple of embedded databases I could use in addition to the one provided in the test requirements:
 ##### 	https://github.com/petersirka/nosql (MIT license) - Seems like it could work. Small and it has documentation on how to use it.
@@ -32,7 +32,7 @@
 #####	https://www.npmjs.com/package/memory-cache (BSD-2-Clause) - Pretty old project, but still used a lot.
 #####	https://www.npmjs.com/package/node-localcache (MIT) - Another old project, but not used much.
 #####	https://www.npmjs.com/package/node-json-cache (ISC) - Pretty much dead. 1 download last week.
-#####	https://www.npmjs.com/package/node-cache (MIT) - Not sure it's being updated anymore as last publish was 3 years ago, but over 2M downloads weekly so I'm going with ##### this one.
+#####	https://www.npmjs.com/package/node-cache (MIT) - Not sure it's being updated anymore as last publish was 3 years ago, but over 2M downloads weekly so I'm going with this one.
 
 ### Separate projects for front end and back end vs one project to contain them both
-##### In a real world scenario these should be separated. In this case though one project ##### makes sense to make the reveiwing process easier for the Vintri team. After ##### starting off doing them both in one project I've pivoted away from that and made them ##### separate. They are too disparate to include together and it's making  ##### development more difficult as I try to imagine how to do things like share resources when none of ##### that is needed.
+##### In a real world scenario these should be separated. In this case though one project makes sense to make the reveiwing process easier for the Vintri team. After starting off doing them both in one project I've pivoted away from that and made them separate. They are too disparate to include together and it's making development more difficult as I try to imagine how to do things like share resources when none of that is needed.
