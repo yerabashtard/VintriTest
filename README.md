@@ -27,7 +27,7 @@
 ##### There are so many different frameworks to choose from. A lot of them will definitely work for what I need. Going to use Mocha, Chai, and Sinon as indicated by the test requirements.
 
 ### Caching
-##### Requirements - Again something lightweight. I won't need to cache much for this project. I don't care too much about whether the cache persists somewhere like in a ##### file or is in-memory and therefore goes away when the server is shut down. I'll go with something that gets a lot of downloads. Downloads might be an indicator of a ##### more stable bug-free project.
+##### Requirements - Again something lightweight. I won't need to cache much for this project. I don't care too much about whether the cache persists somewhere like in a file or is in-memory and therefore goes away when the server is shut down. I'll go with something that gets a lot of downloads. Downloads might be an indicator of a more stable bug-free project.
 
 #####	https://www.npmjs.com/package/memory-cache (BSD-2-Clause) - Pretty old project, but still used a lot.
 #####	https://www.npmjs.com/package/node-localcache (MIT) - Another old project, but not used much.
