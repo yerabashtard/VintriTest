@@ -34,4 +34,5 @@
 #####	https://www.npmjs.com/package/node-json-cache (ISC) - Pretty much dead. 1 download last week.
 #####	https://www.npmjs.com/package/node-cache (MIT) - Not sure it's being updated anymore as last publish was 3 years ago, but over 2M downloads weekly so I'm going with ##### this one.
 
-##### Separate projects for front end and back end vs one project to contain them both - In a real world scenario these should be separated. In this case though one project ##### makes sense to make the reveiwing process easier for the Vintri team. After starting off doing them both in one project I've pivoted away from that and made them ##### separate. They are too disparate to include together and it's making development more difficult as I try to imagine how to do things like share resources when none of ##### that is needed.
+### Separate projects for front end and back end vs one project to contain them both
+##### In a real world scenario these should be separated. In this case though one project ##### makes sense to make the reveiwing process easier for the Vintri team. After ##### starting off doing them both in one project I've pivoted away from that and made them ##### separate. They are too disparate to include together and it's making  ##### development more difficult as I try to imagine how to do things like share resources when none of ##### that is needed.
