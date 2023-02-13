@@ -3,9 +3,9 @@
 ### Created using Node LTS 18.4.0 and NPM 9.4.2.
 
 ## Quick notes
+##### - Run npm install from the root directly to get all required packages
 ##### - The repo exists online here: https://github.com/yerabashtard/VintriTest
 ##### - The server/config/config.js file should be viewed to ensure correct configuration before the Server is started.
-##### - Run npm install from the root directly to get all required packages
 ##### - The server can be started using the 'npm start' command from the root directory.
 ##### - Tests can be run using the 'npm test' command from the root directory.
 
