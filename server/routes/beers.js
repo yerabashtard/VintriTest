@@ -20,7 +20,8 @@ router.get('/:name', asyncHandler(async (req, res) => {
       name: rawBeer.name,
       description: rawBeer.description,
       first_brewed: rawBeer.first_brewed,
-      food_pairing: rawBeer.food_pairing
+      food_pairing: rawBeer.food_pairing,
+      image_url: rawBeer.image_url
     }
   })
   res.status(HTTP_STATUS.OK).json(filteredBeers)
